@@ -31,7 +31,6 @@
 
 
 <style>
-
 /* ===== GLOBAL FIX ===== */
 html, body {
   overflow-x: hidden;
@@ -106,6 +105,70 @@ img{
   line-height:1.7;
   color:#ccc;
   font-size:15px;
+}
+/* HERO BUTTONS */
+.hero-buttons{
+  display:flex;
+  gap:15px;
+  margin-top:25px;
+  flex-wrap:wrap;
+}
+
+.hero-btn{
+  padding:12px 26px;
+  border-radius:30px;
+  font-weight:600;
+  text-decoration:none;
+  font-size:14px;
+  letter-spacing:0.5px;
+  transition:0.3s ease;
+  display:inline-block;
+}
+
+/* Instagram */
+.hero-btn.insta{
+  background:#ffbd39;
+  color:#000;
+}
+
+.hero-btn.insta:hover{
+  background:#e6a92f;
+  transform:translateY(-2px);
+}
+
+/* LinkedIn */
+.hero-btn.linkedin{
+  border:2px solid #fff;
+  color:#fff;
+  background:transparent;
+}
+
+.hero-btn.linkedin:hover{
+  background:#fff;
+  color:#000;
+}
+
+/* WhatsApp */
+.hero-btn.whatsapp{
+  background:#25D366;
+  color:#fff;
+}
+
+.hero-btn.whatsapp:hover{
+  background:#1ebe5d;
+  transform:translateY(-2px);
+}
+
+/* MOBILE */
+@meXdia(max-width:768px){
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  .hero-btn{
+    width:100%;
+    text-align:center;
+  }
 }
 
 .skill-mf .progress{
@@ -224,6 +287,451 @@ img{
   background: #20b858;
 }
 
+/* ===== GLOBAL FIX ===== */
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body{
+  background:#0f0f0f;
+}
+
+.container{
+  max-width:1100px;
+}
+
+img{
+  max-width:100%;
+  height:auto;
+}
+@media (min-width:992px){
+  .btn-project{
+    min-width:120px;
+    text-align:center;
+  }
+}
+
+/* ===== HERO TEXT ===== */
+.slider-text h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight:700;
+}
+
+#typing-animation {
+  font-size: 28px;
+  font-weight: 600;
+  display:inline-block;
+  min-height:24px;
+  color: #fff;
+  border-right: 3px solid #ffbd39;
+  display:inline-block;
+}
+
+/* HERO MOBILE */
+@media (max-width:768px){
+
+  .slider-text h1{
+    font-size:26px;
+    text-align:center;
+  }
+
+  #typing-animation{
+    font-size:18px;
+  }
+
+  .slider-text .text{
+    text-align:center;
+  }
+}
+
+/* ===== HERO BUTTONS ===== */
+@media (max-width:576px){
+  .slider-text .btn{
+    display:block;
+    width:100%;
+    margin-bottom:10px;
+  }
+}
+
+/* ===== NAVBAR ===== */
+@media (max-width:768px){
+  .navbar-nav{
+    background:#000;
+    text-align:center;
+    padding:10px 0;
+  }
+}
+
+/* ===== ABOUT SECTION ===== */
+.heading-section p{
+  line-height:1.7;
+  color:#ccc;
+  font-size:15px;
+}
+
+.skill-mf .progress{
+  height:8px;
+  border-radius:10px;
+}
+@media(max-width:768px){
+.container{
+  padding-left:15px;
+  padding-right:15px;
+}
+}
+
+.skill-mf span{
+  font-size:14px;
+}
+
+@media (max-width:768px){
+
+  .img-about .row{
+    text-align:center;
+  }
+
+  .about-img img{
+    margin-bottom:20px;
+  }
+
+  .about-info{
+    text-align:center;
+  }
+
+}
+
+/* ===== PROJECT CARDS ===== */
+.project-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.18);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background: #f3f3f3;
+  padding: 8px;
+}
+
+.project-card h5{
+  font-weight:600;
+}
+
+.project-card p{
+  font-size:14px;
+  color:#666;
+}
+
+.btn-project{
+  font-size:12px;
+  padding:7px 16px;
+  border-radius:25px;
+  font-weight:600;
+  margin:4px;
+}
+
+.btn-view{
+  background:#ffbd39;
+  color:#000;
+}
+
+.btn-play{
+  background:#28a745;
+  color:#fff;
+}
+
+@media (max-width:768px){
+  .project-card{
+    margin-bottom:20px;
+  }
+
+  .project-card img{
+    height:160px;
+  }
+}
+
+/* ===== ROUND PROJECT BUTTONS ===== */
+
+
+
+
+
+/* HOVER EFFECT */
+.btn-project:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 15px rgba(0,0,0,0.25);
+}
+.project-card{
+  display:flex;
+  flex-direction:column;
+}
+
+.project-card .p-3{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+
+.btn-view{
+  background:#ffbd39;
+  color:#000;
+}
+
+.btn-play{
+  background:#28a745;
+  color:#fff;
+}
+
+@media (max-width:768px){
+  .project-card{
+    margin-bottom:20px;
+  }
+
+  .project-card img{
+    height:160px;
+  }
+}
+
+/* ===== CONTACT CARDS ===== */
+.contact-info .box{
+  transition:0.3s;
+}
+
+.contact-info .box:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ===== WHATSAPP FLOAT ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  font-size: 22px;
+  padding: 14px 16px;
+  border-radius: 50%;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.whatsapp-float:hover {
+  background: #20b858;
+}
+/* ============================= */
+/* 📱 MOBILE PERFECT RESPONSIVE */
+/* ============================= */
+
+@media (max-width:768px){
+
+/* HERO SECTION FIX */
+.one-third{
+  display:none !important;
+}
+
+.slider-text{
+  text-align:center !important;
+}
+
+.slider-text h1{
+  font-size:26px !important;
+}
+
+#typing-animation{
+  font-size:18px !important;
+  white-space:normal;
+  border-right:none;
+}
+
+/* HERO BUTTONS */
+.slider-text .btn{
+  display:block;
+  width:100%;
+  margin-bottom:10px;
+}
+
+/* NAVBAR FIX */
+.navbar-brand{
+  font-size:18px;
+}
+
+.navbar-toggler{
+  margin-right:10px;
+}
+
+/* ABOUT SECTION */
+.img-about .row{
+  flex-direction:column;
+  text-align:center;
+}
+
+.about-img img{
+  width:140px;
+  margin:auto;
+}
+
+.about-info{
+  text-align:center;
+  margin-top:10px;
+}
+
+/* SKILLS SPACING */
+.skill-mf{
+  margin-top:20px;
+}
+
+/* ABOUT RIGHT SIDE */
+.pl-lg-5{
+  padding-left:0 !important;
+}
+
+/* PROJECT CARDS */
+.project-card img{
+  height:150px;
+}
+
+.project-card{
+  margin-bottom:20px;
+}
+
+/* CONTACT BOXES */
+.contact-info .box{
+  margin-bottom:15px;
+}
+
+/* MAP HEIGHT */
+iframe{
+  height:250px !important;
+}
+
+/* FORM INPUT FIX */
+input, textarea{
+  font-size:16px !important;
+}
+
+/* FOOTER SOCIAL SPACING */
+.ftco-footer-social{
+  flex-direction:column;
+  gap:10px;
+}
+
+/* WHATSAPP FLOAT SMALL */
+.whatsapp-float{
+  font-size:18px;
+  padding:12px 14px;
+}
+
+}
+
+/* ============================= */
+/* CONTACT SECTION PREMIUM STYLE */
+/* ============================= */
+
+.contact-info{
+  display:flex;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+/* equal column height */
+.contact-info .col-md-6,
+.contact-info .col-lg-3{
+  display:flex;
+}
+
+/* card style */
+.contact-info .box{
+  width:100%;
+  min-height:180px;              /* same height */
+  padding:25px 20px;
+  background:#111;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,0.06);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  transition:0.3s ease;
+}
+
+/* hover effect */
+.contact-info .box:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.4);
+  border-color:#ffbd39;
+}
+
+/* icons */
+.contact-info .box span{
+  font-size:28px;
+  margin-bottom:10px;
+  color:#ffbd39;
+}
+
+/* headings */
+.contact-info .box h3{
+  font-size:14px;
+  letter-spacing:1px;
+  margin-bottom:10px;
+  color:#ffbd39;
+  font-weight:600;
+}
+
+/* text */
+.contact-info .box p{
+  color:#ccc;
+  font-size:14px;
+  line-height:1.6;
+  margin:0;
+}
+
+/* links */
+.contact-info .box a{
+  color:#fff;
+  text-decoration:none;
+}
+
+.contact-info .box a:hover{
+  color:#ffbd39;
+}
+
+/* WHATSAPP icon green */
+.icon-whatsapp{
+  color:#25D366 !important;
+}
+
+/* ================= */
+/* MOBILE OPTIMIZE   */
+/* ================= */
+
+@media(max-width:768px){
+
+  .contact-info{
+    gap:15px;
+  }
+
+  .contact-info .box{
+    min-height:150px;
+  }
+
+}
 </style>
   </head>
 
@@ -287,9 +795,7 @@ img{
                     const typingAnimationElement = document.getElementById('typing-animation');
 
                     // Create an array of typing text
-                    const typingTexts = ['Android & .NET Developer'];
-
-
+                    const typingTexts = ['Android Developer', '.NET Developer','Python Developer'];
                     // Create a function to display the typing animation for a given text
                     function playTypingAnimation(text) {
                       // Loop through each character and add it to the element
@@ -311,17 +817,19 @@ img{
                   </script><br><br>
                   <!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
                   <!-- <br> -->
-                  <p>
-  <a href="https://www.instagram.com/sahil.codes_0192" target="_blank"
-     class="btn btn-primary py-3 px-4">Instagram</a>
+                 <div class="hero-buttons">
+  <a href="https://www.instagram.com/sahil.codes_0192" target="_blank" class="hero-btn insta">
+    Instagram
+  </a>
 
-  <a href="https://www.linkedin.com/in/sahil-khan-belim" target="_blank"
-     class="btn btn-white btn-outline-white py-3 px-4">LinkedIn</a>
+  <a href="https://www.linkedin.com/in/sahil-khan-belim" target="_blank" class="hero-btn linkedin">
+    LinkedIn
+  </a>
 
-  <a href="https://wa.me/919726085161" target="_blank"
-     class="btn btn-success py-3 px-4">WhatsApp</a>
-</p>
-
+  <a href="https://wa.me/919726085161" target="_blank" class="hero-btn whatsapp">
+    WhatsApp
+  </a>
+</div>
                 </div>
               </div>
             </div>
@@ -365,6 +873,9 @@ img{
 
               <span>Java</span>
               <div class="progress"><div class="progress-bar" style="width:90%"></div></div>
+
+ 	      <span>Python</span>
+              <div class="progress"><div class="progress-bar" style="width:75%"></div></div>
 
               <span>C#</span>
               <div class="progress"><div class="progress-bar" style="width:88%"></div></div>
@@ -489,80 +1000,69 @@ focused on building practical and efficient software solutions.
         <p>Here are some of the applications and systems I have developed.</p>
       </div>
     </div>
+<div class="row">
 
-    <div class="row">
-<div class="col-md-6 col-lg-3 ftco-animate">
-  <div class="project-card">
+  <!-- PROJECT 1 -->
+  <div class="col-md-6 col-lg-3 ftco-animate">
+    <div class="project-card">
 
-    <img src="images/project1.jpeg" alt="Transport Management App">
+      <img src="images/project1.jpeg" alt="Transport Management App">
 
-    <div class="p-3 text-center">
+      <div class="p-3 text-center">
 
-      <h5>Taqdeer Truck Hisab</h5>
+        <h5>Taqdeer Truck Hisab</h5>
 
-      <p>
-        Android app for managing trips, drivers,
-        expenses and profit tracking in transport businesses.
+        <p>
+          Android app for managing trips, drivers,
+          expenses and profit tracking in transport businesses.
+        </p>
 
-      </p>
+        <div class="mt-2 project-buttons">
+          <a href="#" class="btn-project btn-view">
+            <i class="fa-solid fa-eye"></i> View
+          </a>
 
-      <div class="mt-2">
-
-        <!-- View Project -->
-        <a href="#" class="btn-project btn-view">
-          <i class="fa-solid fa-eye"></i>
-          View
-        </a>
-
-        <!-- Play Store -->
-        <a href="https://play.google.com/store/apps/details?id=com.taqdeer.taqdeertruckhisab" target="_blank" class="btn-project btn-play">
-          <i class="fa-brands fa-google-play"></i>
-          Play Store
-        </a>
+          <a href="https://play.google.com/store/apps/details?id=com.taqdeer.taqdeertruckhisab"
+             target="_blank"
+             class="btn-project btn-play">
+             <i class="fa-brands fa-google-play"></i> Play Store
+          </a>
+        </div>
 
       </div>
-
     </div>
   </div>
-</div>
-<div class="col-md-6 col-lg-3 ftco-animate">
-  <div class="project-card">
 
-    <div class="window-frame">
+  <!-- PROJECT 2 -->
+  <div class="col-md-6 col-lg-3 ftco-animate">
+    <div class="project-card">
+
       <img src="images/project2.png" alt="C# Desktop Application">
-    </div>
 
-    <div class="p-3 text-center">
+      <div class="p-3 text-center">
 
-      <h5>C# Management System</h5>
+        <h5>C# Management System</h5>
 
-      <p>
-        Windows desktop management system with secure login,
-        database management and automated reports.
+        <p>
+          Windows desktop management system with secure login,
+          database management and automated reports.
+        </p>
 
-      </p>
+        <div class="mt-2 project-buttons">
+          <a href="#" class="btn-project btn-view">
+            <i class="fa-solid fa-eye"></i> View
+          </a>
 
-      <div class="mt-2">
-
-        <!-- View Project -->
-        <a href="#" class="btn-project btn-view">
-          <i class="fa-solid fa-eye"></i>
-          View
-        </a>
-
-        <!-- GitHub -->
-        <a href="#" target="_blank" class="btn-project btn-play">
-          <i class="fa-brands fa-github"></i>
-          Code
-        </a>
+          <a href="#" class="btn-project btn-play">
+            <i class="fa-brands fa-github"></i> Code
+          </a>
+        </div>
 
       </div>
-
     </div>
   </div>
-</div>
-</section>
-<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+
+</div><section class="ftco-section contact-section ftco-no-pb" id="contact-section">
   <div class="container">
 
     <!-- Heading -->
