@@ -793,16 +793,22 @@ input, textarea{
                     // Initialize the typing animation
                     const typingAnimationElement = document.getElementById('typing-animation');
 
-                    // Create an array of typing text
-                    const typingTexts = ['Android Developer', '.NET Developer','Python Developer'];
-                    // Create a function to display the typing animation for a given text
-                    function playTypingAnimation(text) {
-                      // Loop through each character and add it to the element
-                      for (let i = 0; i < text.length; i++) {
-                        setTimeout(() => {
-                          typingAnimationElement.textContent += text[i];
-                        }, i * 100); // Decreased delay to speed up the typing animation
-                      }
+                    
+					  // Create an array of typing text
+const typingTexts = [
+  'Android Developer',
+  'Flutter Developer',
+  'Mobile App Developer'
+];
+
+// Create a function to display the typing animation for a given text
+function playTypingAnimation(text) {
+  // Loop through each character and add it to the element
+  for (let i = 0; i < text.length; i++) {
+    setTimeout(() => {
+      typingAnimationElement.textContent += text[i];
+    }, i * 100);
+  }
 
                       // Once the animation is complete, reset the text and start over
                       setTimeout(() => {
